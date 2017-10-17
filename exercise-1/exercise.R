@@ -27,9 +27,6 @@ worst.hwy <- two.wheel.over.20$id[two.wheel.over.20$hwy == min(two.wheel.over.20
 # Write a function that takes a `year` and a `make` as parameters, and returns 
 # The vehicle that gets the most hwy miles/gallon of vehicles of that make in that year
 
-of.yr.make <- vehicles[vehicles$year == 1995 & vehicles$make == 'Honda',]
-most.hwy <- of.yr.make[of.yr.make$hwy == max(of.yr.make$hwy),]
-
 MostHwy <- function(year, make) {
   of.yr.make <- vehicles[vehicles$year == year & vehicles$make == make,]
   most.hwy <- of.yr.make[of.yr.make$hwy == max(of.yr.make$hwy),]

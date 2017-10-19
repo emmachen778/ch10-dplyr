@@ -23,13 +23,13 @@ flights<- mutate(flights, gain = arr_delay - dep_delay) %>% arrange(-gain)
 hist(flights$gain)
 
 # On average, did flights gain or lose time?
-mean(flights$gain, na.rm = T) #-5.66
+mean(flights$gain, na.rm = T) #-5.66 LOSE
 
 # Create a data.frame that is of flights headed to seatac ('SEA'), 
 to.SEA <- filter(flights, dest == 'SEA')
 
 # On average, did flights to seatac gain or loose time?
-mean(to.SEA$gain, na.rm = T) #-11.70
+mean(to.SEA$gain, na.rm = T) #-11.70 LOSEs
 
 ### Bonus ###
 # Write a function that allows you to specify an origin, a destination, and a column of interest
